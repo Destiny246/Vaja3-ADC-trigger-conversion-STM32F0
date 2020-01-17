@@ -7,22 +7,17 @@
       <li>ADC_IN10</li>
     <h4>2.h:</h4>
       <li>PC9</li>
-    <h4>3.c:</h4>
-      <li>sConfigOC.Pulse = 50;</li>
-    <h4>5.a:</h4>
-      <li>sConfigOC.Pulse = 25;</li>
-    <h4>5.c:</h4>
-      <h6>1</h6>
-        <li>Vrednost zanke htim1.Istance->CCR1 postane vrednost dutyCycle-a</li>
-      <h6>2</h6>
-        <li>Širina se poveča za 10%</li>
-      <h6>3</h6>
-        <li>Če pulz preseže 90%, se postavi nazaj na 10%</li>
+    <h4>2.i:</h4>
+      <li>APB1 peripheral clock se nastavi na polovico APB1 Timer clock, vsi ostali se pa nastavijo na isto frekvenco kot APB1 Timer clock.</li>
+    <h4>2.l:</h4>
+      <li>16000</li>
+    <h4>3.f:</h4>
+        <li>HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);</li>
 </ul>
 
 <ul>
   <h3>Komentar:</h3>
   <p>
-    Koda oddaja PWM signal, ki se koračno niža dokler ne pride do 0, ko skoči nazaj na 90% moči.
+    Vrednost se, da preprosto spreminjati s potenciometrom. Med nalogo sma imela nekaj problemov ko sma pozabila vpisati eno vrstico kode. Ko je bilo to popravljeno je program deloval odlično.
   </p>
 </ul>
